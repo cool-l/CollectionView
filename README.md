@@ -12,4 +12,5 @@ contentOffset()
 contentOffset(y, animated) // set contentOffset
 visibleCells()
 ```
-
+## Demo
+see index.html, large-amount-of-images.html
