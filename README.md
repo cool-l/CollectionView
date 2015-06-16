@@ -5,6 +5,11 @@ A memory and CPU efficient implementation of displaying a collection of contents
 ## Dependent
 jQuery
 
-##Demo
-
+## Methods
+```
+reloadData()
+contentOffset()
+contentOffset(y, animated) // set contentOffset
+visibleCells()
+```
 
