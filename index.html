@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Collection View Demo</title>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/collectionview.js"></script>
+
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// create test data
+			var data = [];
+			for (var i=0; i<100; i++) {
+				data.push(i);
+			}
+
+			var cv = new CollectionView({
+				datasource: {
+					numberOfItems: function() { return data.length; },
+					sizeForCell: function() { return FESize(150, 150); },
+		            contentInsets: function() { return FEInset(5, 50, 5, 50); },
+		            lineSpacing: function() { return 5; },
+		            interitemSpacing: function() { return 5; },
+		            contentAlignment: function() { return CollectionViewContentAlignment.Center; },
+		            cellForItemAtIndex: function(cell, index) {
+		            	if (cell == null) {
+		            		cell = new CollectionViewCell();
+		            		cell.css({
+		            			"background-color": "rgb(236, 236, 236)"
+		            		});
+		            	};
+
+		            	var number = data[index];
+		            	cell.html(String(number));
+
+		            	return cell;
+		            }
+				}
+			});
+
+			cv.height(800);
+			$(document.body).append(cv);
+			cv.reloadData();
+
+			// handle resize event
+			$(window).on("resize", function() {
+				cv.reloadData();
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
