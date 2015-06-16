@@ -1,1 +1,1 @@
-# JS-collectionview
+# JS-CollectionView
