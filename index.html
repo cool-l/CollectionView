@@ -20,7 +20,7 @@
         $(document).ready(function() {
             // create test data
             var data = [];
-            for (var i=0; i<100; i++) {
+            for (var i=0; i<1000; i++) {
                 data.push(i);
             }
 
@@ -36,7 +36,8 @@
                         if (cell == null) {
                             cell = new CollectionViewCell();
                             cell.css({
-                                "background-color": "rgb(236, 236, 236)"
+                                "background-color": "rgb(236, 236, 236)",
+                                "cursor": "pointer"
                             });
                         };
 
