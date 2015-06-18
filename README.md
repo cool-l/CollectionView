@@ -1,4 +1,4 @@
-# Front-end CollectionView with Javascript
+# Front-end CollectionView
 ## Introduction
 A memory and CPU efficient implementation of displaying a collection of contents in web browser.
 
