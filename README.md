@@ -1,6 +1,6 @@
 # Front-end CollectionView
 ## Introduction
-A memory and CPU efficient implementation to display a collection of contents in web browser.
+A memory and CPU efficient implementation to display a collection of data in web browser.
 
 ## Dependent
 jQuery
